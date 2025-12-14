@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document QA Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📄 Document QA Assistant</h1>
+            <p>Upload documents and ask questions powered by AI</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Upload Section -->
+            <div class="upload-section">
+                <h2>📤 Upload Document</h2>
+                <div class="upload-area" id="uploadArea">
+                    <input type="file" id="fileInput" accept=".pdf,.txt,.md" hidden>
+                    <label for="fileInput" class="upload-label">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        <p>Click to browse or drag & drop</p>
+                        <span>PDF, TXT, or MD files</span>
+                    </label>
+                </div>
+                <div id="uploadStatus" class="status-message"></div>
+                <div id="documentInfo" class="document-info"></div>
+            </div>
+
+            <!-- Chat Section -->
+            <div class="chat-section">
+                <h2>💬 Ask Questions</h2>
+                <div class="chat-container" id="chatContainer">
+                    <div class="welcome-message">
+                        <p>👋 Welcome! Upload a document to start asking questions.</p>
+                    </div>
+                </div>
+                <div class="input-area">
+                    <input 
+                        type="text" 
+                        id="questionInput" 
+                        placeholder="Ask a question about your document..." 
+                        disabled
+                    >
+                    <button id="sendBtn" disabled>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
